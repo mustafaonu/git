@@ -1,0 +1,19 @@
+from random import randint  ##### Sayı tahmin etme oyunu.Mustafa Onur'un ilk Python projesi.
+rand = randint(1,30)
+sayac = 0
+
+while True:
+    sayac += 1
+    sayi = int(input("1 ile 30 arasında sayı giriniz(0 = çıkış):"))
+    if(sayi == 0):
+       print("Oyunu iptal ettiniz")
+       break
+    elif sayi < rand:
+        print("Daha yüksek bir sayı girin.")
+        continue
+    elif sayi > rand:
+        print("Daha düşük bir sayı girin.")
+        continue
+    else:
+        print("Rastgele bir sayu yazdır{0}!".format(rand))
+        print("Tahmin edilen sayınız{0}".format(sayac))
